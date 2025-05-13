@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -72,10 +73,16 @@ WSGI_APPLICATION = 'NomNoms.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# edit to online eventually
+# our databases will not be the same
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'nomnoms_db',
+        'USER': 'root',
+        'PASSWORD': 'wearenumberone',
+        'HOST': 'localhost', 
+        'PORT': '3306'
     }
 }
 
